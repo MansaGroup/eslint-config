@@ -2,11 +2,11 @@
 
 This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)
 
-## Installation
+# Installation
 
-TBC
+`npm i -D @mansagroup/eslint-config`
 
-## Usage 
+# Usage 
 
 Add some ESLint config to your `.eslintrc.json`:
 ```js
@@ -14,12 +14,23 @@ Add some ESLint config to your `.eslintrc.json`:
   "extends": ["TBC"]
 }
 ```
+# Extensions
 
-## Helpfull links
-[Eslint shareable configuration](https://eslint.org/docs/developer-guide/shareable-configs)
+- In VSCode you can select `View > Extensions` to view the extensions sidebar and search in marketplace.
 
-## Testing
+# Testing
 
 1. git clone this project
 2. Create symbolic link between mansa-eslint-config & your project (with `npm link`)
 3. Submit your PR
+
+# Contributing
+
+## Pull Request Process
+
+If you want to submit a PR, please follow these simple steps:
+  1. Add some informations in the PR description about the proposed changes listing.
+  2. Following testing & approval, we will merge the PR, create a release and publish it to NPM.
+
+## Helpful links
+[Eslint shareable configuration](https://eslint.org/docs/developer-guide/shareable-configs)
