@@ -8,10 +8,10 @@ This repository contains the ESLint configuration for projects at [Mansa](https:
 
 # Usage 
 
-Add some ESLint config to your `.eslintrc.json`:
+Add some ESLint config to your `.eslintrc.json`, for example if you are working on backend services:
 ```js
 {
-  "extends": ["TBC"]
+  "extends": ["@mansagroup/eslint-config"],
 }
 ```
 # Extensions
@@ -21,8 +21,8 @@ Add some ESLint config to your `.eslintrc.json`:
 # Testing
 
 1. git clone this project
-2. Create symbolic link between mansa-eslint-config & your project (with `npm link`)
-3. Submit your PR
+2. Use `npm pack`
+3. Run `npm i yourtargz.tgz` inside the project you wanna test
 
 # Contributing
 

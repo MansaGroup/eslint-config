@@ -1,5 +1,1 @@
-const rulesBackend = require('./src/backend.js')
-
-module.exports = {
-  rulesBackend,
-}
+module.exports = require('./src/backend.js')
