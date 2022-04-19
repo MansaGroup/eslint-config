@@ -1,16 +1,27 @@
 {
   "name": "@mansagroup/eslint-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
-  "main": "index.js",
-  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MansaGroup/mansa-eslint-config.git"
+    "url": "git+https://github.com/MansaGroup/eslint-config.git"
   },
+  "keywords": [
+    "eslint",
+    "mansa",
+    "node",
+    "react",
+    "fp"
+  ],
+  "author": "Mansa Open Source <oss@getmansa.tech>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MansaGroup/eslint-config/issues"
+  },
+  "homepage": "https://github.com/MansaGroup/eslint-config#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.12.0",
     "@typescript-eslint/parser": "5.12.0",
@@ -25,12 +36,5 @@
   "devDependencies": {
     "np": "^7.6.0",
     "typescript": "4.5.5"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MansaGroup/mansa-eslint-config/issues"
-  },
-  "homepage": "https://github.com/MansaGroup/mansa-eslint-config#readme"
+  }
 }
