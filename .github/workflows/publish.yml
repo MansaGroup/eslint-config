@@ -3,9 +3,7 @@ name: publish
 on:
   release:
     types: [published]
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -30,7 +28,8 @@ jobs:
 
       - name: Publish package
         shell: bash
-        run: npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG --no-tests
+        run: |
+          npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG --no-tests --message "chore: v%s"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_PACKAGE_VERSION: ${{ github.event_name == 'release' && github.event.release || 'prerelease' }}
