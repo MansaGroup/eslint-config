@@ -30,6 +30,10 @@ jobs:
         with:
           node-version: 16
 
+      - name: Login to npm
+        shell: bash
+        run: npm set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN }}
+
       - name: Install dependencies
         shell: bash
         run: npm ci

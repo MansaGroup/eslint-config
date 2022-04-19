@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
   "main": "index.js",
+  "files": [
+    "README.md",
+    "src",
+    "index.js"
+  ],
   "scripts": {
     "lint": "eslint .",
     "release": "np"
