@@ -2,6 +2,7 @@
   "name": "@mansagroup/eslint-config",
   "version": "0.0.1",
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
