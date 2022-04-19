@@ -14,6 +14,6 @@ module.exports = {
         'fp/no-mutating-methods': 0,
         'fp/no-throw': 0,
       },
-    }
+    },
   ],
 };

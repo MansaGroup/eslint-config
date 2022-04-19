@@ -1,13 +1,13 @@
 module.exports = {
   root: true,
-  extends: ['./src/recommended'],
-  ignorePatterns: ['*.md'],
+  extends: ['./src/recommended', './src/react', './src/node'],
+  ignorePatterns: ['*.md', '*.json'],
   overrides: [
     {
       files: ['*.js'],
       rules: {
-        'sonarjs/no-duplicate-string': 'off'
-      }
-    }
-  ]
-}
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
+  ],
+};

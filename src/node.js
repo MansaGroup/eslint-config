@@ -1,10 +1,10 @@
 module.exports = {
+  env: {
+    node: true,
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-      env: {
-        node: true,
-      },
       rules: {
         'import/no-restricted-paths': [
           'error',
