@@ -1,21 +1,11 @@
 name: publish
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        type: string
-        description: Version to publish
-        default: prerelease
-        required: true
-      tag:
-        type: choice
-        description: Tag to publish
-        default: next
-        options:
-          - latest
-          - next
-        required: true
+  release:
+    types: [published]
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
@@ -40,4 +30,7 @@ jobs:
 
       - name: Publish package
         shell: bash
-        run: npm run release ${{ github.event.inputs.version }} -- --tag=${{ github.event.inputs.tag }}
+        run: npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG --no-tests
+        env:
+          NPM_PACKAGE_VERSION: ${{ github.event_name == 'release' && github.event.release || 'prerelease' }}
+          NPM_PACKAGE_TAG: ${{ github.event_name == 'release' && 'latest' || 'next' }}
