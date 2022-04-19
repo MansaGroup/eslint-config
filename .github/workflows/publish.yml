@@ -20,17 +20,18 @@ jobs:
         with:
           node-version: 16
 
-      - name: Login to npm
-        shell: bash
-        run: npm set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN }}
-
       - name: Install dependencies
         shell: bash
         run: npm ci
+
+      - name: Prepare npm config for publish
+        shell: bash
+        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
 
       - name: Publish package
         shell: bash
         run: npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG --no-tests
         env:
+          NPM_TOKEN: ${{ secret.NPM_TOKEN }}
           NPM_PACKAGE_VERSION: ${{ github.event_name == 'release' && github.event.release || 'prerelease' }}
           NPM_PACKAGE_TAG: ${{ github.event_name == 'release' && 'latest' || 'next' }}
