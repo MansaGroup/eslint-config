@@ -1,11 +1,9 @@
 name: publish
 
 on:
-  push:
-    branches:
-      - main
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -28,5 +26,4 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          tag: ${{ github.event_name == 'push' && 'next' || 'latest' }}
           access: public
