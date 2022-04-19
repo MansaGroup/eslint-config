@@ -11,7 +11,7 @@ This repository contains the ESLint configuration for projects at [Mansa](https:
 Add some ESLint config to your `.eslintrc.json`, for example if you are working on backend services:
 ```js
 {
-  "extends": ["@mansagroup/eslint-config"],
+  "extends": ["@mansagroup/eslint-config/backend"],
 }
 ```
 # Extensions
