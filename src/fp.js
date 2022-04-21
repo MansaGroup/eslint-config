@@ -3,6 +3,12 @@ module.exports = {
   extends: ['plugin:fp/recommended'],
   overrides: [
     {
+      files: ['*.js'],
+      rules: {
+        'fp/no-mutation': ['error', { commonjs: true }],
+      },
+    },
+    {
       files: ['features/**/*', '*InMem.ts', 'test/*', '*.*spec.ts'],
       rules: {
         'fp/no-class': 0,
