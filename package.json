@@ -12,7 +12,8 @@
   "scripts": {
     "lint": "eslint .",
     "prerelease": "rm -Rf dist && mkdir dist && cp README.md package.json package-lock.json src/* dist",
-    "release": "cd dist && np --no-tests --message=\"chore: v%s\" && cp dist/package.json package.json"
+    "release": "cd dist && np --no-tests --message=\"chore: v%s\"",
+    "postrelease": "cp dist/package.json package.json"
   },
   "repository": {
     "type": "git",
