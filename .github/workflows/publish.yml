@@ -29,7 +29,7 @@ jobs:
       - name: Publish package
         shell: bash
         run: |
-          npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG --no-tests --message "chore: v%s"
+          npm run release $NPM_PACKAGE_VERSION -- --tag=$NPM_PACKAGE_TAG
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_PACKAGE_VERSION: ${{ github.event_name == 'release' && github.event.release || 'prerelease' }}
