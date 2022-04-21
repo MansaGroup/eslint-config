@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "release": "np --no-tests --contents src --message 'chore: v%s'"
+    "release": "np --no-tests --contents=src --message=\"chore: v%s\""
   },
   "repository": {
     "type": "git",
