@@ -4,12 +4,15 @@
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
   "files": [
     "README.md",
-    "src"
+    "recommended.js",
+    "node.js",
+    "react.js",
+    "fp.js"
   ],
   "scripts": {
     "lint": "eslint .",
     "prerelease": "rimraf dist && copyfiles -f README.md package.json package-lock.json src/* dist",
-    "release": "cd dist && np --no-tests --message=\"chore: v%s\""
+    "release": "np --contents=dist --no-tests --message=\"chore: v%s\""
   },
   "repository": {
     "type": "git",
