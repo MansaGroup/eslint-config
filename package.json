@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "eslint .",
     "prerelease": "rimraf dist && copyfiles -f README.md package.json package-lock.json src/* dist",
-    "release": "np --contents=dist --no-tests --message=\"chore: v%s\""
+    "release": "cd dist && np --no-tests --message=\"chore: v%s\""
   },
   "repository": {
     "type": "git",
