@@ -1,6 +1,6 @@
 {
   "name": "@mansagroup/eslint-config",
-  "version": "0.0.2-2",
+  "version": "0.0.2-3",
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
   "files": [
     "README.md",
@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "prerelease": "rimraf dist && copyfiles -f README.md package.json package-lock.json src/* dist",
-    "release": "cd dist && np --no-tests --message=\"chore: v%s\""
+    "prerelease": "rm -Rf dist && mkdir dist && cp README.md package.json package-lock.json src/* dist",
+    "release": "cd dist && np --no-tests --message=\"chore: v%s\" && cp dist/package.json package.json"
   },
   "repository": {
     "type": "git",
@@ -52,9 +52,7 @@
     "prettier": "2.5.1"
   },
   "devDependencies": {
-    "copyfiles": "2.4.1",
     "np": "7.6.0",
-    "rimraf": "3.0.2",
     "typescript": "4.5.5"
   },
   "peerDependencies": {
