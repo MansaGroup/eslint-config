@@ -2,7 +2,8 @@
 
 ![License](https://img.shields.io/github/license/MansaGroup/eslint-config?style=flat-square) ![GitHub Stars](https://img.shields.io/github/stars/MansaGroup/eslint-config?style=flat-square)
 
-This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup).
+Sharable ESLint configurations for the coding standards and rules at
+Mansa.
 
 ## Rulesets
 
