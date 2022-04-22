@@ -9,6 +9,14 @@ module.exports = {
         'plugin:import/typescript',
       ],
       plugins: ['sonarjs', 'import', 'unused-imports'],
+      settings: {
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: 'tsconfig.json',
+          },
+        },
+      },
       rules: {
         'import/order': [
           'error',
