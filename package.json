@@ -1,6 +1,6 @@
 {
   "name": "@mansagroup/eslint-config",
-  "version": "0.0.2-3",
+  "version": "0.0.2-4",
   "description": "This repository contains the ESLint configuration for projects at [Mansa](https://github.com/MansaGroup)",
   "files": [
     "README.md",
