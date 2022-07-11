@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-import-resolver-typescript": "3.1.1",
+    "eslint-import-resolver-typescript": "3.2.5",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest-dom": "4.0.2",
